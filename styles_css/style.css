@@ -1,0 +1,401 @@
+html,
+body {
+    height: 100%;
+    /* Makes the document occupy the full window height */
+    margin: 0;
+}
+
+body {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    /* Arranges elements in a column */
+    min-height: 50vh;
+    /* Ensures body has a minimum height of 50% of the viewport */
+}
+
+/* Main content container expands to fill available space */
+.content {
+    flex: 1;
+    /* Expands content to occupy available space */
+    padding-bottom: 80px;
+    /* Space for footer to prevent overlap */
+    margin: 5%;
+}
+
+/* Hero section with background image */
+.hero-section {
+    background-image: url('../images/home_navbar.jpg');
+    background-size: cover;
+    background-position: 0 -50px;
+    background-repeat: no-repeat;
+    height: 260px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Hero section title styling */
+.hero-section h1 {
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 55px;
+    padding: 0px 7px;
+    border-radius: 10px;
+}
+
+/* Hero section paragraph styling */
+.hero-section p {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0px 7px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+/* Search box container styling */
+.search-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.9);
+    max-width: 800px;
+    margin-top: 15px;
+}
+
+/* Login box sizing */
+.login-container {
+    width: 30%;
+    margin-top: 20px;
+}
+
+/* Registration box sizing */
+.registration-container {
+    width: 60%;
+    margin-top: 15px;
+}
+
+/* Title styling */
+.search-container h1 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+/* Form layout */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Individual form field styling */
+.form-group {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Form label styling */
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Station dropdown menu styling */
+.form-group select,
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Search button styling */
+.search-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    /* Makes button take full width on small screens */
+    max-width: 200px;
+    /* Limits width on larger screens */
+    margin: 0 auto;
+    /* Centers the button */
+    display: flex;
+    justify-content: center;
+}
+
+/* Search button hover effect */
+.search-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Email list container */
+.email-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.9);
+}
+
+/* Email item hover effect */
+.email-item:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Email subject styling */
+.email-item h5 {
+    margin: 0;
+    color: #333;
+}
+
+/* Email paragraph margins */
+.email-item p {
+    margin: 0;
+    color: #666;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 170px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 3px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+/* Grid header styling */
+.grid-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Grid row styling */
+.grid-row {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    /* Vertical padding inside rows */
+}
+
+/* Price styling */
+.price {
+    font-size: 1.25rem;
+    /* Larger text size for price */
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Primary button styling */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-weight: bold;
+}
+
+/* Primary button hover effect */
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+    /* Adjustments for tablet and mobile devices */
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .rotabile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .convoglio-container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .btn-crea-convoglio {
+        width: 100%;
+    }
+}
+
+/* Small screen adjustments (phones) */
+@media (max-width: 576px) {
+
+    /* Container adjustments for mobile */
+    .search-container,
+    .login-container,
+    .registration-container,
+    .convoglio-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Mobile container scroll handling */
+    .container-mobile {
+        overflow: scroll;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        min-height: 100%;
+    }
+
+    /* Mobile hero section text adjustments */
+    .hero-section h1 {
+        font-size: 35px;
+        padding: 5px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    /* Mobile button width adjustments */
+    .search-btn,
+    .btn-crea-convoglio {
+        width: 100%;
+    }
+
+    .form-row {
+        gap: 10px;
+    }
+
+    /* Mobile grid adjustments */
+    .grid-header,
+    .grid-row {
+        padding-right: 15px;
+        width: 1000px;
+        flex-direction: row;
+    }
+
+    /* Mobile email list adjustments */
+    .email-list {
+        width: 1000px;
+        padding-right: 15px;
+    }
+
+    .email-item h5 {
+        font-size: 16px;
+        /* Adjust text size for small screens */
+        margin-bottom: 5px;
+    }
+
+    .email-item p {
+        font-size: 14px;
+        /* Reduce text size for better readability */
+    }
+
+    .email-item .text-end {
+        text-align: left;
+        /* Align delete button to the left */
+        margin-top: 15px;
+        /* Space between paragraphs and button */
+    }
+}
+
+/* Rolling stock grid layout */
+.rotabile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* Individual rolling stock item styling */
+.rotabile-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: #f8f9fa;
+    transition: background-color 0.2s ease;
+}
+
+/* Rolling stock item hover effect */
+.rotabile-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Rolling stock information styling */
+.rotabile-info {
+    margin-left: 0.5rem;
+    flex: 1;
+}
+
+.rotabile-info h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Checkbox customization */
+.rotabile-item .form-check-input {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+/* Main container for train composition */
+.convoglio-container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Create train button specific styles */
+.btn-crea-convoglio {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    width: auto;
+    min-width: 200px;
+}
+
+/* Rolling stock type sections */
+.rotabile-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Rolling stock section headers */
+.rotabile-section h2 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+/* Train name input field */
+.nome-convoglio-input {
+    max-width: 300px;
+    margin-bottom: 2rem;
+}

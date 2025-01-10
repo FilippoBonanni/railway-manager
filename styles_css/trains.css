@@ -1,0 +1,63 @@
+/* Page layout */
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    padding-left: 40px;
+    max-width: 900px;
+}
+
+/* Style for each train */
+.train {
+    margin-bottom: 60px;
+    /* Space between trains */
+}
+
+/* Style for the description */
+.description {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Shadow effect for the description */
+    max-width: 400px;
+    /* Limits the description width */
+}
+
+/* Alignment of description and image */
+.train>.description,
+.train>.image {
+    flex: 1;
+    /* Allows each element to take up equal space */
+}
+
+/* Image */
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .train {
+        flex-direction: column;
+        /* Changes direction to column on small screens */
+    }
+
+    .description,
+    .image {
+        max-width: 100%;
+        /* Limits width to 100% */
+    }
+}
+
+/* Small screen adjustments (phones) */
+@media (max-width: 576px) {
+    .timeline {
+        max-width: 100%;
+        overflow-x: scroll;
+        min-height: 600px;
+        max-width: 600px;
+        width: 100%;
+    }
+}
